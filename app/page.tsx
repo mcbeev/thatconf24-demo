@@ -1,6 +1,11 @@
 import Image from "next/image";
+import { unstable_noStore as noStore } from 'next/cache';
 
 export default function Home() {
+  noStore();
+
+  const timeOnServer = new Date().toLocaleTimeString('en-US');
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
@@ -53,7 +58,8 @@ export default function Home() {
             </span>
           </h2>
           <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
+            Find in-depth information about Next.js features and API.<br/><br/>
+            The time on the server is <strong>{timeOnServer}</strong>
           </p>
         </a>
 
