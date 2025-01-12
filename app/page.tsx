@@ -20,7 +20,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            By{" "}
+            Hosted on Azure SWA. By{" "}
             <Image
               src="/vercel.svg"
               alt="Vercel Logo"
